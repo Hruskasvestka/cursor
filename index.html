@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale= 1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Interesting cursor style..</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+	<div class="lines">
+		<div class="y-first-line"></div>
+		<div class="y-second-line"></div>
+		<div class="y-third-line"></div>
+	</div>
+	<div class="img-1 img"></div>
+	<div class="img-2 img"></div>
+	<div class="img-3 img"></div>
+	<div class="img-4 img"></div>
+	<div class="img-5 img"></div>
+	<div class="container">
+		<h1>cursorFollowedByImgs</h1>
+		<h2>cursor Followed ByImgs<br /><p>//touch the screen if u're using your phone</p></h2>	
+		
+	</div>
+
+	<span class="btn anim-button" onclick="goBack()"><< go back</span>
+	<script>
+		function goBack() {
+		  window.history.back()
+		}
+	</script>
+	<script>
+		const img1 = document.querySelector(".img-1");
+		const img2 = document.querySelector(".img-2");
+		const img3 = document.querySelector(".img-3");
+		const img4 = document.querySelector(".img-4");
+		const img5 = document.querySelector(".img-5");
+
+		document.addEventListener("mousemove", e => {
+			img1.setAttribute (
+				"style",
+				"top :" + (e.pageY - 2) + "px; left :" + (e.pageX +2) + "px"
+			);
+
+			img2.setAttribute (
+				"style",
+				"top :" + (e.pageY - 8) + "px; left :" + (e.pageX +8) + "px"
+			);
+
+			img3.setAttribute (
+				"style",
+				"top :" + (e.pageY - 14) + "px; left :" + (e.pageX +14) + "px"
+			);
+
+			img4.setAttribute (
+				"style",
+				"top :" + (e.pageY - 20) + "px; left :" + (e.pageX +20) + "px"
+			);
+
+			img5.setAttribute (
+				"style",
+				"top :" + (e.pageY - 26) + "px; left :" + (e.pageX +26) + "px"
+			);
+
+
+		})
+	</script>
+
+
+</body>
+</html>
